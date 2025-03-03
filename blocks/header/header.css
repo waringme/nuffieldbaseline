@@ -57,7 +57,7 @@ header .nav-wrapper .nav-search {
 header .nav-wrapper .nav-search button {
   position: absolute;
   right: 12px;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
