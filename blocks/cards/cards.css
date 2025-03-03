@@ -9,7 +9,11 @@
 
 .cards > ul > li {
   border: 1px solid #dadada;
-  background-color: var(--background-color);
+  background-color: #00a200;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
 }
 
 .cards .cards-card-body {
