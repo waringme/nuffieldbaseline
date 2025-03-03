@@ -6,32 +6,52 @@
 .hero {
   position: relative;
   padding: 40px 24px;
-  min-height: 300px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .hero h1 {
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: "Nuffield", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 600px;
+    padding: 60px 32px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    max-width: 1000px;
   }
 }
