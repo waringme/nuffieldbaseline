@@ -152,6 +152,7 @@ textarea,
 select,
 button {
   font: inherit;
+  
 }
 
 /* links */
@@ -182,7 +183,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color:black;
+  border-color: white;
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
