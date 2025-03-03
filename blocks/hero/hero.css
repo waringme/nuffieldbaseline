@@ -13,20 +13,51 @@
   overflow: hidden;
 }
 
-.hero h1 {
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
+  background-color: #00a200;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  margin: 0;
+  color: white;
   text-align: center;
   font-family: "Nuffield", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+}
+
+.hero .button-container {
+  margin-top: 24px;
+}
+
+.hero .button {
+  display: inline-block;
+  background-color: white;
+  color: #00a200;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-family: "Nuffield", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.hero .button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .hero picture {
@@ -50,8 +81,16 @@
     padding: 60px 32px;
   }
   
+  .hero .hero-content {
+    padding: 48px;
+    max-width: 1000px;
+  }
+  
   .hero h1 {
     font-size: 3.5rem;
-    max-width: 1000px;
+  }
+  
+  .hero .button {
+    font-size: 1.125rem;
   }
 }
