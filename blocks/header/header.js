@@ -115,7 +115,7 @@ export default async function decorate(block) {
 
   // decorate nav DOM
   block.textContent = '';
-  
+
   // Create main navigation
   const nav = document.createElement('nav');
   nav.id = 'nav';
@@ -144,7 +144,7 @@ export default async function decorate(block) {
   const navTools = nav.querySelector('.nav-tools');
   if (navTools) {
     nav.removeChild(navTools);
-    
+  
     // Create search bar
     const searchDiv = document.createElement('div');
     searchDiv.className = 'nav-search';
@@ -153,13 +153,13 @@ export default async function decorate(block) {
     searchInput.placeholder = 'What do you want to do today?';
     searchInput.setAttribute('aria-label', 'What do you want to do today?');
     searchDiv.appendChild(searchInput);
-    
+     
     const searchButton = document.createElement('button');
     searchButton.type = 'submit';
     searchButton.setAttribute('aria-label', 'Submit search');
     searchButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/></svg>`;
     searchDiv.appendChild(searchButton);
-    
+  
     navTools.appendChild(searchDiv);
     nav.appendChild(navTools);
   }
