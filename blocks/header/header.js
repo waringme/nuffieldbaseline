@@ -144,7 +144,7 @@ export default async function decorate(block) {
   const navTools = nav.querySelector('.nav-tools');
   if (navTools) {
     nav.removeChild(navTools);
-  
+
     // Create search bar
     const searchDiv = document.createElement('div');
     searchDiv.className = 'nav-search';
@@ -153,13 +153,13 @@ export default async function decorate(block) {
     searchInput.placeholder = 'What do you want to do today?';
     searchInput.setAttribute('aria-label', 'What do you want to do today?');
     searchDiv.appendChild(searchInput);
-     
+   
     const searchButton = document.createElement('button');
     searchButton.type = 'submit';
     searchButton.setAttribute('aria-label', 'Submit search');
     searchButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/></svg>`;
     searchDiv.appendChild(searchButton);
-  
+
     navTools.appendChild(searchDiv);
     nav.appendChild(navTools);
   }
@@ -168,7 +168,7 @@ export default async function decorate(block) {
   const loginLink = document.createElement('a');
   loginLink.href = '#';
   loginLink.className = 'login-link';
-  loginLink.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z" fill="currentColor"/></svg><span>Login</span>`;
+  loginLink.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z" fill="currentColor"/></svg><span>Login</span>`;
   nav.appendChild(loginLink);
 
   // hamburger for mobile
@@ -180,17 +180,17 @@ export default async function decorate(block) {
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
-  
+
   // Create main navigation wrapper
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
-  
+
   // Create secondary navigation
   const navSecondary = document.createElement('nav');
   navSecondary.id = 'nav-secondary';
   navSecondary.className = 'nav-secondary';
-  
+
   // Add the sections to secondary nav
   if (navSections) {
     navSecondary.appendChild(navSections);
@@ -206,16 +206,16 @@ export default async function decorate(block) {
       });
     });
   }
-  
+
   // Create secondary navigation wrapper
   const navWrapperSecondary = document.createElement('div');
   navWrapperSecondary.className = 'nav-wrapper-secondary';
   navWrapperSecondary.append(navSecondary);
-  
+
   // Add both navigations to the block
   block.append(navWrapper);
   block.append(navWrapperSecondary);
-  
+
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
