@@ -12,12 +12,12 @@ export default function decorate(block) {
   // Create button container and button
   const buttonContainer = document.createElement('div');
   buttonContainer.className = 'button-container';
-  
+
   const button = document.createElement('a');
   button.className = 'button';
   button.href = '#';
   button.textContent = 'Join today'; // You can customize this text
-  
+
   buttonContainer.appendChild(button);
   heroContent.appendChild(buttonContainer);
 
